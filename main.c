@@ -1,5 +1,3 @@
-/* main.c — dynamic Board version (4 / 9 / 16) */
-
 #include <stdio.h>
 #include <string.h>
 #include <stdint.h>
@@ -7,8 +5,7 @@
 #include "ui.h"
 #include "save.h"
 
-/* ------------------------------------------------------------- */
-/* Check if there are no empty fields                            */
+//Check if there are no empty fields
 static int board_full(const Board *b)
 {
     for (int r = 0; r < b->size; ++r)
@@ -17,11 +14,9 @@ static int board_full(const Board *b)
     return 1;
 }
 
-/* ------------------------------------------------------------- */
-/* One game session                                              */
 static void play_game(Board *b)
 {
-    /* Remember clues */
+    //Remember clues
     Board *initial = board_create(b->size);
     for (int r = 0; r < b->size; ++r)
         memcpy(initial->g[r], b->g[r], b->size);     /* copy each row */
@@ -39,7 +34,6 @@ static void play_game(Board *b)
         printf("Move: ");
         if (!fgets(line, sizeof line, stdin)) break;
 
-        /* Commands */
         if (!strncmp(line, "q", 1)) break;
 
         if (!strncmp(line, "save", 4)) {
@@ -59,7 +53,7 @@ static void play_game(Board *b)
             continue;
         }
 
-        /* Player move */
+        //Player move
         char crd[4];
         int  val;
         if (sscanf(line, "%3s %d", crd, &val) != 2) {
@@ -87,8 +81,7 @@ static void play_game(Board *b)
     board_free(initial);
 }
 
-/* ------------------------------------------------------------- */
-/* MAIN MENU                                                     */
+// Menu
 int main(void)
 {
     while (1) {
@@ -105,7 +98,6 @@ int main(void)
         if (sel[0] == '0')
             break;
 
-        /* ------------------- New game ------------------- */
         else if (sel[0] == '1') {
 
             int size;
@@ -116,7 +108,7 @@ int main(void)
                 continue;
             }
 
-            int clues_min = size;          /* at least one per row */
+            int clues_min = size;
             int clues_max = size*size;
             int clues;
             printf("How many clues? (%d-%d): ", clues_min, clues_max);
@@ -124,7 +116,7 @@ int main(void)
                 while (getchar()!='\n');
                 continue;
             }
-            while (getchar()!='\n');       /* flush \n */
+            while (getchar()!='\n');
 
             Board *b = board_create((uint8_t)size);
             generate_board(b, (uint16_t)clues);
@@ -132,15 +124,18 @@ int main(void)
             board_free(b);
         }
 
-        /* ------------------- Load save ------------------ */
+        //Loading save
         else if (sel[0] == '2') {
             FILE *test = fopen("save.txt","r");
-            if(!test){ puts("save.txt not found"); continue; }
+            if(!test) {
+                puts("save.txt not found"); continue;
+            }
 
             int temp_size;
             if(fscanf(test,"%d",&temp_size)!=1 ||
-               (temp_size!=4 && temp_size!=9 && temp_size!=16))
-            { fclose(test); puts("Save corrupted"); continue; }
+               (temp_size!=4 && temp_size!=9 && temp_size!=16)) {
+                fclose(test); puts("Save corrupted"); continue;
+            }
             fclose(test);
 
             Board *b = board_create((uint8_t)temp_size);
@@ -153,7 +148,7 @@ int main(void)
             board_free(b);
         }
 
-        /* ------------------- Instruction ---------------- */
+        //Instruction
         else if (sel[0] == '3') {
             puts("\nEnter moves for any size as e.g.  B3 7");
             puts("Columns are letters A-P, rows are 1-16");
