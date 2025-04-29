@@ -17,7 +17,7 @@ static void print_board(int b[N][N])
 int main(void)
 {
     int board[N][N];
-    generate_board(board, 30);   /* 30 wypełnionych pól = poziom średni */
+    generate_board(board, 30);
     print_board(board);
     return 0;
 }

@@ -26,13 +26,6 @@ static int box_free(int i, int j, int board[][N], int x)
     return 1;
 }
 
-static int is_safe(int i, int j, int board[][N], int x)
-{
-    return row_free(i, board, x) &&
-           col_free(j, board, x) &&
-           box_free(i, j, board, x);
-}
-
 //Backtracking
 static int find_empty(int board[][N], int *ri, int *ci)
 {
@@ -93,4 +86,11 @@ void generate_board(int board[N][N], int clues)
         board[r][c] = 0;
         --to_remove;
     }
+}
+
+int is_safe(int i, int j, int board[][N], int x)
+{
+    return row_free(i, board, x) &&
+           col_free(j, board, x) &&
+           box_free(i, j, board, x);
 }
