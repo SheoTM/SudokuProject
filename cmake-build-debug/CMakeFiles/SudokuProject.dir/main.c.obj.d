@@ -14,5 +14,9 @@ CMakeFiles/SudokuProject.dir/main.c.obj: \
  D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/string.h \
  D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h \
  D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ D:/CLion\ 2024.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h \
+ D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/stdint.h \
+ D:/CLion\ 2024.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h \
+ D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/stddef.h \
  C:\Users\leon0\SudokuProject\sudoku.h C:\Users\leon0\SudokuProject\ui.h \
  C:\Users\leon0\SudokuProject\save.h
