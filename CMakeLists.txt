@@ -10,4 +10,6 @@ add_executable(SudokuProject
     sudoku.c
     sudoku.h
     ui.c
-    ui.h)
+    ui.h
+    save.c
+    save.h)

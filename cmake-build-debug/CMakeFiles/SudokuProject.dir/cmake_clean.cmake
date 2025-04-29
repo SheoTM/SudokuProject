@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/SudokuProject.dir/main.c.obj"
   "CMakeFiles/SudokuProject.dir/main.c.obj.d"
+  "CMakeFiles/SudokuProject.dir/save.c.obj"
+  "CMakeFiles/SudokuProject.dir/save.c.obj.d"
   "CMakeFiles/SudokuProject.dir/sudoku.c.obj"
   "CMakeFiles/SudokuProject.dir/sudoku.c.obj.d"
   "CMakeFiles/SudokuProject.dir/ui.c.obj"

@@ -152,6 +152,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuProject.dir\build.make CMakeFiles/SudokuProject.dir/main.c.s
 .PHONY : main.c.s
 
+save.obj: save.c.obj
+.PHONY : save.obj
+
+# target to build an object file
+save.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuProject.dir\build.make CMakeFiles/SudokuProject.dir/save.c.obj
+.PHONY : save.c.obj
+
+save.i: save.c.i
+.PHONY : save.i
+
+# target to preprocess a source file
+save.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuProject.dir\build.make CMakeFiles/SudokuProject.dir/save.c.i
+.PHONY : save.c.i
+
+save.s: save.c.s
+.PHONY : save.s
+
+# target to generate assembly for a file
+save.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuProject.dir\build.make CMakeFiles/SudokuProject.dir/save.c.s
+.PHONY : save.c.s
+
 sudoku.obj: sudoku.c.obj
 .PHONY : sudoku.obj
 
@@ -212,6 +236,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... save.obj
+	@echo ... save.i
+	@echo ... save.s
 	@echo ... sudoku.obj
 	@echo ... sudoku.i
 	@echo ... sudoku.s

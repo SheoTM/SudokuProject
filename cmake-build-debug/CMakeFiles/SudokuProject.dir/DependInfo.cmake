@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/leon0/SudokuProject/main.c" "CMakeFiles/SudokuProject.dir/main.c.obj" "gcc" "CMakeFiles/SudokuProject.dir/main.c.obj.d"
+  "C:/Users/leon0/SudokuProject/save.c" "CMakeFiles/SudokuProject.dir/save.c.obj" "gcc" "CMakeFiles/SudokuProject.dir/save.c.obj.d"
   "C:/Users/leon0/SudokuProject/sudoku.c" "CMakeFiles/SudokuProject.dir/sudoku.c.obj" "gcc" "CMakeFiles/SudokuProject.dir/sudoku.c.obj.d"
   "C:/Users/leon0/SudokuProject/ui.c" "CMakeFiles/SudokuProject.dir/ui.c.obj" "gcc" "CMakeFiles/SudokuProject.dir/ui.c.obj.d"
   )

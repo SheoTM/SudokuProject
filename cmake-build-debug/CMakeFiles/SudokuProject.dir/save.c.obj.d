@@ -1,5 +1,6 @@
-CMakeFiles/SudokuProject.dir/main.c.obj: \
- C:\Users\leon0\SudokuProject\main.c \
+CMakeFiles/SudokuProject.dir/save.c.obj: \
+ C:\Users\leon0\SudokuProject\save.c C:\Users\leon0\SudokuProject\save.h \
+ C:\Users\leon0\SudokuProject\sudoku.h \
  D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
  D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
  D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \
@@ -10,9 +11,4 @@ CMakeFiles/SudokuProject.dir/main.c.obj: \
  D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
  D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/_mingw_off_t.h \
  D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
- D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
- C:\Users\leon0\SudokuProject\sudoku.h C:\Users\leon0\SudokuProject\ui.h \
- D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/string.h \
- D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h \
- D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
- C:\Users\leon0\SudokuProject\save.h
+ D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h
