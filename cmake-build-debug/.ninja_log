@@ -1,0 +1,4 @@
+# ninja log v6
+1	142	7676394892110175	CMakeFiles/SudokuProject.dir/main.c.obj	94be8db059e9bff8
+13	158	7676394892231663	CMakeFiles/SudokuProject.dir/sudoku.c.obj	e32e4f454b735640
+159	293	7676394893680648	SudokuProject.exe	887e7da9f3057ff1
