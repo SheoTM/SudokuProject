@@ -1,0 +1,3 @@
+"D:\CLion 2024.3.4\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\SudokuProject.dir/objects.a
+"D:\CLion 2024.3.4\bin\mingw\bin\ar.exe" qc CMakeFiles\SudokuProject.dir/objects.a @CMakeFiles\SudokuProject.dir\objects1.rsp
+"D:\CLion 2024.3.4\bin\mingw\bin\gcc.exe" -g -Wl,--whole-archive CMakeFiles\SudokuProject.dir/objects.a -Wl,--no-whole-archive -o SudokuProject.exe -Wl,--out-implib,libSudokuProject.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\SudokuProject.dir\linkLibs.rsp

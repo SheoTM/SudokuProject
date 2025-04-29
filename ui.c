@@ -2,7 +2,7 @@
 #include <ctype.h>
 #include "ui.h"
 
-/* ---------- drukowanie ---------- */
+//Printing
 void ui_print(int b[N][N])
 {
     for (int r = 0; r < N; ++r) {
