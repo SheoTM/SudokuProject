@@ -1,24 +1,22 @@
 #include <stdio.h>
+#include <string.h>
 #include "sudoku.h"
 #include "ui.h"
-#include "string.h"
 #include "save.h"
 
-//Check if there is no empty fields
-static int board_full(int b[N][N]) {
-    for (int r=0; r<N; ++r)
-        for (int c=0; c<N; ++c)
+// Check if there are no empty fields
+static int board_full(int b[N][N])
+{
+    for (int r = 0; r < N; ++r)
+        for (int c = 0; c < N; ++c)
             if (b[r][c] == 0) return 0;
     return 1;
 }
 
-int main(void)
+static void play_game(int board[N][N])
 {
-    int board[N][N];
-    generate_board(board, 30);
-
     int initial[N][N];
-    memcpy(initial, board, sizeof board);
+    memcpy(initial, board, sizeof board);   //Remember the clues
 
     char line[32];
 
@@ -29,31 +27,30 @@ int main(void)
             puts("Congratulations! You solved it!");
             break;
         }
-        printf("Move (np. B3 7 | s = save | l = load | q = quit ): ");
-        if (!fgets(line, sizeof line, stdin))
-            break;
 
-        if (line[0] == 'q')
-            break;
+        printf("Move: ");
+        if (!fgets(line, sizeof line, stdin)) break;
 
-        if (!strncmp(line, "q",    1)) break;
-        //Save
-        if (!strncmp(line, "s", 4)) {
-            if (save_game("save.txt", board)) puts("Saved.");
+        // Commands
+        if (!strncmp(line, "q", 1)) break;
+
+        if (!strncmp(line, "save", 4)) {
+            if (save_game("save.txt", board))
+                puts("Saved to save.txt");
             else
                 puts("Save error!");
             continue;
         }
-        //Load
-        if (!strncmp(line, "l", 4)) {
+        if (!strncmp(line, "load", 4)) {
             if (load_game("save.txt", board)) {
-                memcpy(initial, board, sizeof board);
-                puts("Loaded.");
+                memcpy(initial, board, sizeof board);  //Update the clues
+                puts("Loaded");
             } else
-                puts("No save file.");
+                puts("No save file");
             continue;
         }
-        //Player moves
+
+        // Player move
         char crd[3];
         int  val;
         if (sscanf(line, "%2s %d", crd, &val) != 2) {
@@ -77,6 +74,53 @@ int main(void)
 
         board[r][c] = val;
     }
-    return 0;
 }
 
+// Menu
+int main(void)
+{
+    int board[N][N];
+//TODO: Add instruction and 4x4, 9x9, 16x16 mode
+    while (1) {
+        puts("\n           MAIN MENU           ");
+        puts("1. New game");
+        puts("2. Load save");
+        puts("3. Instruction");
+        puts("0. Quit");
+        printf("Choose: ");
+
+        char sel[8];
+        if (!fgets(sel, sizeof sel, stdin)) break;
+
+        if (sel[0] == '0')
+            break;
+
+        else if (sel[0] == '1') {
+            int clues;
+            printf("How many clues? (17-81): ");
+            if (scanf("%d", &clues) != 1) {
+                while (getchar() != '\n');
+                continue;
+            }
+            while (getchar() != '\n');
+
+            generate_board(board, clues);
+            play_game(board);
+        }
+
+        else if (sel[0] == '2') {
+            if (load_game("save.txt", board)) {
+                puts("Save loaded");
+                play_game(board);
+            } else {
+                puts("save.txt not found");
+            }
+        }
+
+        else {
+            puts("Unknown option – choose 0, 1 or 2");
+        }
+    }
+    puts("Carbonaura");
+    return 0;
+}
