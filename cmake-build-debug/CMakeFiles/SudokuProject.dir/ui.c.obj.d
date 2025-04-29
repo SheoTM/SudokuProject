@@ -12,11 +12,6 @@ CMakeFiles/SudokuProject.dir/ui.c.obj: C:\Users\leon0\SudokuProject\ui.c \
  D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
  D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/ctype.h \
  D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h \
- C:\Users\leon0\SudokuProject\ui.h C:\Users\leon0\SudokuProject\sudoku.h \
- D:/CLion\ 2024.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h \
- D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/stdint.h \
- D:/CLion\ 2024.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h \
- D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/stddef.h \
  D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/stdlib.h \
  D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
  D:/CLion\ 2024.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h \
@@ -25,4 +20,9 @@ CMakeFiles/SudokuProject.dir/ui.c.obj: C:\Users\leon0\SudokuProject\ui.c \
  D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
  D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/malloc.h \
  D:/CLion\ 2024.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h \
- D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/errno.h
+ D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/errno.h \
+ C:\Users\leon0\SudokuProject\ui.h C:\Users\leon0\SudokuProject\sudoku.h \
+ D:/CLion\ 2024.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h \
+ D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/stdint.h \
+ D:/CLion\ 2024.3.4/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h \
+ D:/CLion\ 2024.3.4/bin/mingw/x86_64-w64-mingw32/include/stddef.h

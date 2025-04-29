@@ -19,7 +19,7 @@ static void play_game(Board *b)
     //Remember clues
     Board *initial = board_create(b->size);
     for (int r = 0; r < b->size; ++r)
-        memcpy(initial->g[r], b->g[r], b->size);     /* copy each row */
+        memcpy(initial->g[r], b->g[r], b->size);
 
     char line[32];
 

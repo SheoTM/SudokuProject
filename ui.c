@@ -1,38 +1,54 @@
 #include <stdio.h>
 #include <ctype.h>
-#include "ui.h"
 #include <stdlib.h>
+#include "ui.h"
 
 static char cell(uint8_t v)
 {
-    if(v==0)        return '.';
-    if(v<=9)        return '0'+v;
-    return 'A'+(v-10);
+    if (v == 0)  return '.';
+    if (v <= 9)  return '0' + v;          //1-9
+    return 'A' + (v - 10);                //10-16 - A-G
+}
+
+static void print_col_header(uint8_t n, uint8_t box)
+{
+    printf("     ");
+    for (uint8_t c = 0; c < n; ++c) {
+        if (c % box == 0 && c != 0) printf("  ");
+        printf("%c ", 'A' + c);
+    }
+    putchar('\n');
+}
+
+static void print_hline(uint8_t box)
+{
+    printf("    ");
+    for(uint8_t b = 0; b < box; ++b){
+        printf("-");
+        for(uint8_t j = 0; j < box*2+1; ++j) printf("-");
+    }
+    puts("");
 }
 
 void ui_print(const Board *b)
 {
-    uint8_t n=b->size, box=b->box;
+    uint8_t n   = b->size;
+    uint8_t box = b->box;
 
-    for(uint8_t r=0;r<n;++r){
-        if(r%box==0){
-            for(uint8_t i=0;i<box;++i){
-                printf("+");
-                for(uint8_t j=0;j<box*2+1;++j) printf("-");
-            }
-            puts("+");
-        }
-        for(uint8_t c=0;c<n;++c){
-            if(c%box==0) printf("| ");
+    print_col_header(n, box);
+
+    for (uint8_t r = 0; r < n; ++r) {
+        if (r % box == 0) print_hline(box);
+
+        printf("%2d  ", r + 1);
+
+        for (uint8_t c = 0; c < n; ++c) {
+            if (c % box == 0) printf("| ");
             printf("%c ", cell(b->g[r][c]));
         }
         puts("|");
     }
-    for(uint8_t i=0;i<box;++i){
-        printf("+");
-        for(uint8_t j=0; j<box*2+1; ++j) printf("-");
-    }
-    puts("+");
+    print_hline(box);
 }
 
 int ui_parse(const Board *b,const char *txt,int *row,int *col)
