@@ -1,7 +1,8 @@
 # ninja log v6
-1	142	7676394892110175	CMakeFiles/SudokuProject.dir/main.c.obj	94be8db059e9bff8
-13	158	7676394892231663	CMakeFiles/SudokuProject.dir/sudoku.c.obj	e32e4f454b735640
-159	293	7676394893680648	SudokuProject.exe	887e7da9f3057ff1
-4	142	7676402779768357	CMakeFiles/SudokuProject.dir/main.c.obj	94be8db059e9bff8
+3	124	7676404744449140	CMakeFiles/SudokuProject.dir/main.c.obj	94be8db059e9bff8
 15	147	7676402779889764	CMakeFiles/SudokuProject.dir/sudoku.c.obj	e32e4f454b735640
 147	253	7676402781207843	SudokuProject.exe	887e7da9f3057ff1
+2	209	7676404906359418	build.ninja	f358381d2d70b154
+3	136	7676404906610479	CMakeFiles/SudokuProject.dir/main.c.obj	94be8db059e9bff8
+13	138	7676404906710459	CMakeFiles/SudokuProject.dir/ui.c.obj	84de09e5e93b7fb3
+138	229	7676404907967983	SudokuProject.exe	3b45e0f42a42d470

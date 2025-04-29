@@ -8,4 +8,6 @@ include_directories(.)
 add_executable(SudokuProject
     main.c
     sudoku.c
-    sudoku.h)
+    sudoku.h
+    ui.c
+    ui.h)
