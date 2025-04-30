@@ -34,7 +34,7 @@ static void play_game(Board *b)
         printf("Move: ");
         if (!fgets(line, sizeof line, stdin)) break;
 
-        if (!strncmp(line, "q", 1)) break;
+        if (!strncmp(line, "quit", 1)) break;
 
         if (!strncmp(line, "save", 4)) {
             if (save_game("save.txt", b))
@@ -152,7 +152,7 @@ int main(void)
         else if (sel[0] == '3') {
             puts("\nEnter moves for any size as e.g.  B3 7");
             puts("Columns are letters A-P, rows are 1-16");
-            puts("Commands inside game:  save   load   q");
+            puts("Commands inside game:  \n save -> save the game\n load -> load the previous game\n quit -> q");
         }
 
         else {
