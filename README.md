@@ -22,8 +22,8 @@
 
 ---
 
-## 🛠️ TODO (Mam wyjazd przedwczesny majówkowy, wiem, że miałem na to 3 tygodnie)
-## Dużo komplikacji było, nie chcę tego powtarzać, śni mi się po nocach te sudoku.
+## 🛠️ TODO 
+## Te sudoku śni i będzie mi się śnić po nocach
 (Szanowny Panie Łukaszu chciałbym tylko to zaliczyć)
 
 | Plan                             | Status | Uwagi                                               |
@@ -34,10 +34,10 @@
 
 ---
 
-## ⏳ Kompilacja i uruchomienie
-
 ## Meme of the month
 ![Meme](assets/Meme.jpg)
+
+## ⏳ Kompilacja i uruchomienie
 ### MinGW / GCC – najszybciej
 
 ```bash
