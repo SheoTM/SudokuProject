@@ -4,7 +4,7 @@
 
 
 * Rozmiary planszy **4 × 4**, **9 × 9** oraz **16 × 16**  
-* Generator z back-trackingiem i maskami bitowymi  
+* Generator z back-trackingiem 
 * Walidacja ruchu w czasie rzeczywistym  
 * Polecenia `save` / `load` zapisują postęp do **save.txt**
 
