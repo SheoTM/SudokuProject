@@ -30,33 +30,35 @@ static void print_hline(uint8_t box)
     puts("");
 }
 
-void ui_print(const Board *b)
+void ui_print(const Board *board)
 {
-    uint8_t n   = b->size;
-    uint8_t box = b->box;
+    uint8_t n   = board->size;
+    uint8_t box = board->box;
 
     print_col_header(n, box);
 
     for (uint8_t r = 0; r < n; ++r) {
-        if (r % box == 0) print_hline(box);
+        if (r % box == 0)
+            print_hline(box);
 
         printf("%2d  ", r + 1);
 
         for (uint8_t c = 0; c < n; ++c) {
-            if (c % box == 0) printf("| ");
-            printf("%c ", cell(b->g[r][c]));
+            if (c % box == 0)
+                printf("| ");
+            printf("%c ", cell(board->g[r][c]));
         }
         puts("|");
     }
     print_hline(box);
 }
 
-int ui_parse(const Board *b,const char *txt,int *row,int *col)
+int ui_parse(const Board *board,const char *txt,int *row,int *col)
 {
     if(!isalpha((unsigned char)txt[0]) || !isdigit((unsigned char)txt[1]))
         return 0;
     int c=toupper((unsigned char)txt[0])-'A';
     int r=atoi(txt+1)-1;
-    if(r<0||r>=b->size||c<0||c>=b->size) return 0;
+    if(r<0 || r >= board->size || c < 0 || c >= board->size) return 0;
     *row=r; *col=c; return 1;
 }

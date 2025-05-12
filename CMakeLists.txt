@@ -12,4 +12,7 @@ add_executable(SudokuProject
     ui.c
     ui.h
     save.c
-    save.h)
+    save.h
+        anneal.c
+        anneal.h
+)
