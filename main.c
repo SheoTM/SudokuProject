@@ -145,7 +145,7 @@ int main(void)
                 }
             fclose(f);
 
-            //Loard board
+            //Load board
             Board *board = board_create((uint8_t) FileSize);
             if (!load_game("save.txt", board)) {
                 puts("Load failed"); board_free(board);
