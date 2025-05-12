@@ -1,7 +1,7 @@
 # 🧩 Sudoku
 
-![Podgląd gry](assets/AnimationSudoku.gif) 
-
+![Podgląd gry](assets/AnimationSudoku.gif)
+![Aneealing](assets/AnimationAnnealing.gif)
 
 * Rozmiary planszy **4 × 4**, **9 × 9** oraz **16 × 16**  
 * Generator z back-trackingiem i maskami bitowymi  
