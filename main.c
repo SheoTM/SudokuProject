@@ -93,14 +93,10 @@ int main(void)
         else if (sel[0]=='1') {
             int size;
             printf("Board size (4 / 9 / 16): ");
-            if (scanf("%d",&size)!=1 || (size!=4&&size!=9&&size!=16)){ puts("Invalid."); while(getchar()!='\n');
-                continue;
-            }
+            if (scanf("%d",&size)!=1 || (size!=4&&size!=9&&size!=16)){ puts("Invalid."); while(getchar()!='\n'); continue; }
 
             int clues; printf("How many clues? (%d-%d): ",size,size*size);
-            if (scanf("%d",&clues)!=1){ while(getchar()!='\n');
-                continue;
-            }
+            if (scanf("%d",&clues)!=1){ while(getchar()!='\n'); continue; }
             while (getchar()!='\n');
 
             Board *board = board_create(size);

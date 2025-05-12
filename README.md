@@ -39,6 +39,6 @@
 ### MinGW / GCC – najszybciej
 
 ```bash
-gcc *.c -std=c11 -Wall -O2 -o sudoku.exe
+gcc main.c src/*.c -std=c11 -Wall -O2 -o sudoku.exe
 ./sudoku.exe
 

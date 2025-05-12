@@ -93,7 +93,7 @@ static unsigned now_msec(void)
 int sudoku_sa(Board *board, const Board *initial, unsigned msec_limit)
 {
     const double  T0 = 2.0, Tend = 1e-4, alpha = 0.998;
-    const unsigned PRINT_EVERY = 10000;
+    const unsigned PRINT_EVERY = 100000;
 
     srand((unsigned)time(NULL)); //For random results
     // srand(0); //For the same results
