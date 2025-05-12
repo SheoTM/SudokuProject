@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdint.h>
-#include "sudoku.h"
-#include "ui.h"
-#include "save.h"
-#include "anneal.h"
+#include "src/ui.h"
+#include "src/save.h"
+#include "src/anneal.h"
+#include "src/sudoku.h"
 
 //If board is full
 static int board_full(const Board *b)

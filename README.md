@@ -1,6 +1,6 @@
 # 🧩 Sudoku
 
-![Podgląd gry](assets/AnimationSudoku.gif) <!-- ← ścieżka do gifa; jeśli masz inną, podmień -->
+![Podgląd gry](assets/AnimationSudoku.gif) 
 
 
 * Rozmiary planszy **4 × 4**, **9 × 9** oraz **16 × 16**  
@@ -22,9 +22,7 @@
 
 ---
 
-## 🛠️ TODO 
-## Te sudoku śni i będzie mi się śnić po nocach
-(Szanowny Panie Łukaszu chciałbym tylko to zaliczyć)
+## 🛠️ TODO (Może kiedyś)
 
 | Plan                             | Status | Uwagi                                               |
 |----------------------------------|--------|-----------------------------------------------------|
