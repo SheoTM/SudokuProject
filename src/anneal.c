@@ -93,7 +93,7 @@ static unsigned now_msec(void)
 int sudoku_sa(Board *board, const Board *initial, unsigned msec_limit)
 {
     const double  T0 = 2.0, Tend = 1e-4, alpha = 0.998;
-    const unsigned PRINT_EVERY = 1000;
+    const unsigned PRINT_EVERY = 10000;
 
     srand((unsigned)time(NULL)); //For random results
     // srand(0); //For the same results
@@ -111,7 +111,6 @@ int sudoku_sa(Board *board, const Board *initial, unsigned msec_limit)
     while (Ecur && T > Tend && now_msec() - tstart < msec_limit) {
         int iterMax = 50 * board->size * board->size;
         for (int it = 0; it < iterMax; ++it) {
-
             Board *cand = board_clone(cur);
             swap_in_row(cand, initial);
             int Ecand = conflicts(cand);
@@ -125,15 +124,16 @@ int sudoku_sa(Board *board, const Board *initial, unsigned msec_limit)
             } else {
                 board_free(cand);
             }
+
             ++iter_global;
+
+            if (iter_global % PRINT_EVERY == 0)
+                printf("Iterations: %-8llu  T=%7.4f  Ecur=%d  Ebest=%d\n",
+                       iter_global, T, Ecur, Ebest);
         }
 
-        //Cooling&log every rep
         T *= alpha;
         if (Ecur < Ebest) Ebest = Ecur;
-        if (iter_global % PRINT_EVERY == 0)
-            printf("Iterations: %-8llu  T=%7.4f  Ecur=%d  Ebest=%d\n",
-                   iter_global, T, Ecur, Ebest);
     }
 
     // copy result to board
