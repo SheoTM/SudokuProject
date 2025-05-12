@@ -1,6 +1,8 @@
 # 🧩 Sudoku
 
 ![Podgląd gry](assets/AnimationSudoku.gif)
+
+# Simulated Annealing
 ![Aneealing](assets/AnimationAnnealing.gif)
 
 * Rozmiary planszy **4 × 4**, **9 × 9** oraz **16 × 16**  
